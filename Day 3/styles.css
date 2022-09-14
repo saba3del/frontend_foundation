@@ -1,0 +1,25 @@
+form
+        {
+            background-color: rgb(215, 215, 215);
+            opacity: 0.9;
+            width: 560px;
+            padding: 20px;
+            border: 2px solid rgb(57, 54, 54);
+        }
+        div
+        {
+            background-color: bisque;
+            margin: 0px;
+            width: 595px;
+            text-align: center;
+            border: 2px solid rgb(174, 121, 121);
+        }
+        p1
+        {
+            background-color: red;
+        }
+        body
+        {
+            background-image: url("download2.jpg");
+            background-size: cover;
+        }

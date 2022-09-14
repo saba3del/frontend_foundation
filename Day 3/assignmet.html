@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pizza dilevery form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div><h1>WELCOME TO ITALIAN PIZZA!</h1>
+    <h5>We deliver pizza in 40 minutes max. If not - Pizza's on US</h5></div>
+    <form action="pizza.asp" method="get">
+        <label>Email</label><br/>
+        <input type="text" name="uemail" id="uemail" /><br/><br/>
+
+        <label>Select City</label></br>
+        <select name="city" id="city">
+            <option>Hyderabad</option>
+            <option>Chennai</option>
+            <option>Delhi</option>
+            <option>Mumbai</option>
+        </select>
+        <br/><br/>
+
+        <label>Phone</label><br/>
+        <input type="text" name="area" id="area" placeholder="Area" size="6" />
+        <input type="text" name="local1" id="local1" placeholder="Local" size="6"/>
+        <input type="text" name="local2" id="local2" placeholder="Local" size="6"/>
+        <br/><br/>
+        
+        <label>Number of Slices</label><br/>
+        <input type="text" name="slices" id="slices" /><br/><br/>
+        
+        <label>Pizza Size</label><br/>
+        <input type="radio" name="inc" id="inc"/>8-inches
+        <input type="radio" name="inc" id="inc"/>10-inches
+        <input type="radio" name="inc" id="inc"/>12-inches
+        <input type="radio" name="inc" id="inc"/>14-inches
+        <br/><br/>
+
+        <label>Toppings</label><br/>
+        <input type="checkbox" name="t1" id="t1"/>Pepperoni
+        <input type="checkbox" name="t2" id="t2"/>Onions
+        <input type="checkbox" name="t3" id="t3"/>Mushrooms
+        <input type="checkbox" name="t4" id="t4"/>Sausage
+        <br/><br/>
+
+        <input type="checkbox" name="agree" id="agree" required/>
+        I agree to the TERMS AND CONDITIONS 
+        <br/><br/>
+
+        <input type="submit" value="Order Now"/>
+        <input type="reset" value="clear"/>
+        
+    </form>
+</body>
+</html>
