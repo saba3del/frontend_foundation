@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript example</title>
+</head>
+<body>
+    <label>Product Name: </label>
+    <input type="text" name="pname" id="pname"/>
+    </br></br>
+
+    <label>Unit Price:</label>
+    <input type="text" name="uprice" id="uprice"/>
+    </br></br>
+
+    <label>Quantity:</label>
+    <input type="text" name="quan" id="quan"/></br></br>
+    
+    <input type="submit" value="Get Total" onclick="totalAmt()"/>
+
+    <p id="p1"></p>
+
+    <script>
+
+        function totalAmt()
+        {
+
+        var priceObj = document.getElementById("uprice");
+
+        var quanObj = document.getElementById("quan");
+
+        var msgObj = document.getElementById("p1");
+
+        var res = quanObj.value * priceObj.value
+
+        //to add two values from the form as they are string we need parseInt()
+        var res1 = parseInt(quanObj.value) + parseInt(priceObj.value);
+
+        msgObj.innerText = "Total Amount " + res;
+
+
+        }
+    </script>
+</body>
+</html>

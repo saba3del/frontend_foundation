@@ -1,0 +1,35 @@
+<html>
+<head> </head>
+<body>
+	<h3>  Enter your Favourite Color. </h3>
+	<hr></hr>	
+	Fav Color  :  
+    <select id="t1">
+        <option>pink</option>
+        <option>green</option>
+        <option>blue</option>
+    </select>
+	<br></br>
+	<input type="button" onclick="f1()"   value="Set Item" />
+	<input type="button" onclick="f2()"   value="Get Item" />
+	<br></br>
+	<hr/>
+	<a href="supporting.html">Next Page</a>
+	
+	<script>	
+		function f1()
+		{
+			var obj = document.getElementById("t1");		
+			localStorage.setItem("uid", obj.value);			 
+			alert("User Id is stored in Web Storage");	
+		}	
+		
+		function f2()
+		{	
+			 var str  =   localStorage.getItem("uid");	
+			alert("User Id : " +  str);	
+		}
+			
+	</script>	 
+</body>
+</html>
