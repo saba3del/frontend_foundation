@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 2.0 Assignment</title>
+    <style>
+        .reqfield{
+            color: red;
+        }
+        form{
+            /**border: 1px solid black;
+            padding: 30px;**/
+            margin-left: 300px;
+            margin-right: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Account Opening Form</h1>
+    <hr/>
+    <form action="acctopen.php" method="post" autocomplete="off" >
+        <fieldset>
+            <legend>Registration Form</legend>
+        Name on Account
+        <span class="reqfield">*</span><br/>
+        <input type="text" id="firstname" name="firstname" placeholder="first name" autofocus required/>
+        <input type="text" id="lastname" name="lastname" placeholder="last name" required/><br/><br/>
+        
+        Account number
+        <span class="reqfield">*</span><br/>
+        <input type="text" pattern="\d{11}" name="acctno" id="acctno" required /><br/><br/>
+        
+        
+        Account type
+        <span class="reqfield">*</span><br/>
+        <input type="radio" name="acctype" id="acctype" required/>Checking<br/>
+        <input type="radio" name="acctype" id="acctype" required/>Saving<br/><br/>
+        
+       Address
+       <span class="reqfield">*</span><br/>
+       <table>
+        <tr>
+            <td>
+                Address line1<br/>
+                <input type="text" name="add1" id="add1" placeholder="address line 1" required />
+            </td>
+            <td>
+                Address line2<br/>
+                <input type="text" name="add2" id="add2" placeholder="address line 2" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br/>
+            </td>
+            <td>
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                City<br/>
+                <input type="text" name="city" id="city" placeholder="city" required />
+            </td>
+            <td>
+                Pincode<br/>
+                <input type="text" pattern="\d{6}" name="zipcode" id="zipcode" placeholder="pincode" required />
+            </td>
+        </tr>
+       </table>
+       <br/><br/>
+       <!--<input type="text" name="add1" id="add1" placeholder="address line 1" required /><br/><br/>
+       <input type="text" name="add2" id="add2" placeholder="address line 2" /><br/><br/>
+       <input type="text" name="city" id="city" placeholder="city" required />
+       <input type="text" name="state" id="state" placeholder="state" required /><br/><br/>
+       <input type="text" pattern="\d{6}" name="zipcode" id="zipcode" placeholder="pincode" required />-->
+       Country
+       <span class="reqfield">*</span><br/>
+       <select name="country" id="country" required>
+        <option>India</option>
+        <option>USA</option>
+        <option>Canada</option>
+       </select><br/><br/>
+
+       Company name<br/>
+       <input type="text" name="company" id="company" required><br/><br/>
+
+       Telephone number
+       <span class="reqfield">*</span><br/>
+       <input type="text" pattern="\d{2}" name="areacode" id="areacode" placeholder="arae code" required/>
+       -
+       <input type="text" pattern="\d{10}" name="phnno" id="phnno" placeholder="phone number" required/><br/><br/>
+
+       <input type="checkbox" id="terms&conditions" name="terms&conditions" required="yes">I ACCEPT all the terms and conditions<span class="reqfield">*</span><br/><br/>
+    
+       <input type="submit" value="Submit"/><br/><br/>
+
+    </fieldset>
+    </form>
+
+</body>
+</html>
