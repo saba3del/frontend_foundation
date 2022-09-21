@@ -1,0 +1,95 @@
+<!-- Create  a web page to implement drag and drop feature using HTML5 API -->
+<!DOCTYPE html>
+<html>
+	<head>		
+		<style>
+			#div1, #div2
+			{
+				border:3px solid Blue;
+				border-radius  :  10px;
+				padding: 5px;
+				width: 900px;
+				height: 200px;			
+				text-align: center;				
+			}
+            img{
+                border: 1px dotted black;
+                border-radius: 10px;
+                margin: 20px;
+                width: 100px;
+                height: 150px;
+            }
+		</style>
+	</head>
+	<body>
+	<h3>Drag & Drop to select items  </h3>
+	<hr/>	
+ 
+	<div id="div2" style="background-color:rgb(190, 230, 173);">
+	
+	    <img 	src="watch1.png"	
+			    height="90"   width="90"  				
+				id="img1"  
+				draggable="true" 
+				ondragstart="fn_dragStart(event)"
+				/>
+
+		<img 	src="watch2.png"	
+			    height="90"   width="90"  				
+				id="img2"  
+				draggable="true" 
+				ondragstart="fn_dragStart(event)"
+			  />		
+
+	    <img 	src="watch3.png"	
+			    height="90"   width="90"  				
+				id="img3"  
+				draggable="true" 
+				ondragstart="fn_dragStart(event)" />	
+                
+        <img 	src="watch4.png"	
+			    height="90"   width="90"  				
+				id="img4"  
+				draggable="true" 
+				ondragstart="fn_dragStart(event)" />
+
+	</div>
+    <p>Select the item from the box above</p>		
+		<br>	
+ 
+	<div id="div1" 	
+			style="background-color:LightPink;"
+			ondrop="fn_drop(event)"
+			ondragover="fn_dragOver(event)">
+	</div>
+    
+    <p>Drop the selected item in the box</p>
+			
+	<script>	 
+		var  selectedId  = "";   // Global vars
+		
+		function fn_dragStart(event) 
+		{  			
+			selectedId  =  event.target.id ;
+		//	alert(event.target.src);
+		//	alert(selectedId);
+		}	
+		
+		function fn_dragOver(event) 
+		{
+			 event.preventDefault();
+		}
+
+		function fn_drop(event) 
+		{
+			event.preventDefault();
+			var  obj  =  document.getElementById(selectedId);
+			event.target.appendChild( obj );			
+		}		
+	</script>
+	
+	
+	
+	
+	</body>	
+</html>
