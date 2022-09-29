@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Assignment</title>
+</head>
+<body>
+    <h1>Enter user details</h1>
+    <hr/>
+    <fieldset>
+        Name : 
+        <input type="text" name="cname" id="cname"/><br/><br/>
+        Joinnig date :
+        <input type="date" name="jdate" id="jdate"/><br/><br/>
+        Favourite Color :
+        <input type="color" name="favcolor" id="favcolor"/><br/><br/>
+
+        <input type="button" value="save my details" onclick="savedetails()">
+        <a href="assg2.html">Next page</a>
+    </fieldset>
+
+    <script>
+        function savedetails(){
+            var user_details = {};
+            user_details.cname=document.getElementById("cname").value; 
+            user_details.joindate=document.getElementById("jdate").value;
+            user_details.favcolor=document.getElementById("favcolor").value;
+            console.log(user_details);
+
+            var str=JSON.stringify(user_details);
+            console.log(str);
+
+            localStorage.setItem("CusInfo",str);
+            alert("Details Saved")
+
+        }
+    </script>
+    
+</body>
+</html>
