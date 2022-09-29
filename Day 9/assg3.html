@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment3</title>
+</head>
+<body>
+    <h1>Assignment 3</h1>
+    <hr/>
+
+    <form id="details">
+            Empno : 
+            <input type="text" name="empno" id="empno"><br/><br/>
+            Ename : 
+            <input type="text" name="ename" id="ename"><br/><br/>
+            job :
+            <input type="text" name="job" id="job"><br/><br/>
+            Salary :
+            <input type="text" name="salary" id="salary"><br/><br/>
+            Deptno:
+            <input type="text" name="deptno" id="deptno"><br/><br/>
+            <input type="button" value="convert to string" onclick="convertToJson()"><br/><br/>
+            <p id="p1"></p>
+    </form>
+    
+    <script>
+        
+        function convertToJson(){
+            var obj={};
+            obj.empno= document.getElementById("empno").value;
+            obj.ename= document.getElementById("ename").value;
+            obj.job= document.getElementById("job").value;
+            obj.salary= document.getElementById("salary").value;
+            obj.deptno= document.getElementById("deptno").value;
+            
+            console.log(obj);
+            empno=parseInt(empno)
+
+            var str=JSON.stringify(obj);
+            console.log(str);
+
+
+            p1.innerText=str;
+
+            /**works
+             * p1.innerText = "empno : " + parseInt(obj.empno) + ", ename : " + obj.ename + ", job : " + obj.job + ", salary : " + parseInt(obj.salary) + ", deptno : " + parseInt(obj.deptno);**/
+            
+            /**Gives wrong output
+            var obj= document.getElementById(details);
+            var res={empno: obj.empno, empname: obj.ename };
+            console.log(res);
+            var str= JSON.stringify(res);
+            console.log(str);**/
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+</head>
+<body>
+    <h1>User Details</h1>
+    <hr/>
+    <hr/>
+    <input type="button" value="Get User Data" onclick="getTheDetails()">
+    <p id="p1">
+    </p>
+    <img id="img1"/>
+
+    <script>
+        function getTheDetails(){
+        var  str  =    '{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"}';
+
+        var obj=JSON.parse(str);
+        console.log(obj);
+        
+        p1.innerText = "User Id : " + obj.id + '\n' + "First name : " + obj.first_name + '\n' + "Last name : " + obj.last_name + '\n' + "Email : " + obj.email + '\n' + "Avatar : " ;
+        img1.src=obj.avatar;
+
+    }
+
+    </script>
+</body>
+</html>

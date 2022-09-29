@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json assignment1</title>
+</head>
+<body>
+    <h1>Json assignment 1</h1>
+    <hr/>
+
+    <input type="button" value="convert to string" onclick="convertToString()">
+    <input type="button" value="convert to obj" onclick="convertToObj()">
+
+    <script>
+        function convertToString(){
+
+            var obj= {empno: 1, empname: "Scott", job: "painter", salary: 95000, deptno:208}
+            console.log("displayed in object format")
+            console.log(obj)
+            console.log("employee no  : "  +  obj.empno);
+			console.log("employee Name  : "   +  obj.empname);
+			console.log("job : "  +  obj.job);
+            console.log("salary  : "   +  obj.salary);
+            console.log("department no : "   +  obj.deptno);
+
+            var str= JSON.stringify(obj)
+            console.log("objects converted to string : ")
+            console.log(str)
+        }
+
+        function convertToObj(){
+
+            var str= '{"empno": 1, "empname": "Scott", "job": "painter", "salary": 95000, "deptno":208}';
+            console.log("displayed in string format")
+            console.log(str);
+
+            var obj= JSON.parse(str);
+            console.log("string converted to objects")
+            console.log(obj);
+        }
+    </script>
+    
+</body>
+</html>
